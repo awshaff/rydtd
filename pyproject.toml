@@ -1,0 +1,22 @@
+[build-system]
+requires = ["scikit-build-core>=0.10", "pybind11>=2.11"]
+build-backend = "scikit_build_core.build"
+
+[project]
+name = "rydtd"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = ["numpy"]
+
+[tool.scikit-build]
+wheel.packages = ["python/rydtd"]
+cmake.build-type = "Release"
+
+[tool.scikit-build.cmake.define]
+RYDTD_BUILD_TESTS = "OFF"
+
+[tool.ruff]
+line-length = 100
+
+[tool.pytest.ini_options]
+testpaths = ["tests/py"]

@@ -1,0 +1,7 @@
+Checks: >
+  -*,modernize-*,bugprone-*,performance-*,
+  -modernize-use-trailing-return-type,
+  -modernize-use-nodiscard,
+  -bugprone-easily-swappable-parameters
+HeaderFilterRegex: 'include/rydtd/.*'
+WarningsAsErrors: ''
